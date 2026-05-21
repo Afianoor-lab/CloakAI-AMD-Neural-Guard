@@ -5,6 +5,16 @@ from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import OperatorConfig
 
+import os
+import sys
+import subprocess
+
+# Check if spaCy model is installed, if not, download it
+try:
+    import en_core_web_sm
+except ImportError:
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+
 # --- Naya Code (PDF/DOCX Extraction) ---
 def extract_text_from_file(uploaded_file):
     """File type ke mutabiq text extract karne ka function"""
