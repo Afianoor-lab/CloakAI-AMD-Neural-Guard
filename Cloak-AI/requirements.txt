@@ -2,6 +2,6 @@ streamlit
 PyPDF2
 python-docx
 presidio-analyzer
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.5/en_core_web_sm-3.7.5.tar.gz
+spacy
 torch
 transformers
